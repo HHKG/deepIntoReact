@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import List1 from './pages/List';
+import List2 from './pages/List2'
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+      <List1></List1>
+      <List2></List2>
+    </div>
     </div>
   );
 }
