@@ -2,7 +2,7 @@
 import React,{Component} from 'react';
 
 const MyContainer =(WrappedComponent)=>{
-  class extends Component{
+  return class extends Component{
     constructor(props){
       super(props);
       this.state={
@@ -12,6 +12,7 @@ const MyContainer =(WrappedComponent)=>{
 
     }
     onNameChange(event){
+      console.log(event.target.value);
       this.setState({
         name:event.target.value,
       })
@@ -27,3 +28,4 @@ const MyContainer =(WrappedComponent)=>{
     }
   }
 }
+export default MyContainer;
