@@ -2,7 +2,7 @@
 import React,{Component} from 'react';
 import MyContainer from '../Mycontainer/index';
 
-@MyContainer
+// @MyContainer
 class MyComponent extends Component{
 
   render(){
