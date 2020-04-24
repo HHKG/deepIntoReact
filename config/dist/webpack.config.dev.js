@@ -351,8 +351,15 @@ module.exports = function (webpackEnv) {
           loader: require.resolve('babel-loader'),
           options: {
             customize: require.resolve('babel-preset-react-app/webpack-overrides'),
-            plugins: [['@babel/plugin-proposal-decorators', {
+            plugins: [// 配置高阶组件
+            ['@babel/plugin-proposal-decorators', {
               "legacy": true
+            }], // 引入antd时配置
+            ["import", {
+              "libraryName": "antd",
+              "libraryDirectory": "es",
+              "style": "css" // `style: true` 会加载 less 文件
+
             }], [require.resolve('babel-plugin-named-asset-import'), {
               loaderMap: {
                 svg: {

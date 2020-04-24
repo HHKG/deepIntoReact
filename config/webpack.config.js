@@ -371,7 +371,14 @@ module.exports = function(webpackEnv) {
                 ),
                 
                 plugins: [
+                  // 配置高阶组件
                   ['@babel/plugin-proposal-decorators', { "legacy": true }],
+                  // 引入antd时配置
+                  ["import", {
+                    "libraryName": "antd",
+                    "libraryDirectory": "es",
+                    "style": "css" // `style: true` 会加载 less 文件
+                  }],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
