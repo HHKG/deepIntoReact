@@ -6,6 +6,7 @@ import List2 from './pages/List2';
 import MyComponent from '../src/pages/MyComponent';
 import SelectInput from '../src/pages/SelectInput/index';
 import ImmutableSetState from '../src/pages/Immutable_setState';
+import CssTransition from '../src/components/cssTransition';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <List2></List2>
       </div>
       <MyComponent></MyComponent>
-      <SelectInput SelectItem="selectItem"></SelectInput>
+      {/* <SelectInput SelectItem="selectItem"></SelectInput> */}
       <ImmutableSetState></ImmutableSetState>
+      <CssTransition></CssTransition>
     </div>
   );
 }
