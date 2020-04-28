@@ -7,6 +7,9 @@ import MyComponent from '../src/pages/MyComponent';
 import SelectInput from '../src/pages/SelectInput/index';
 import ImmutableSetState from '../src/pages/Immutable_setState';
 import CssTransition from '../src/components/cssTransition';
+import ReactSmooth from '../src/pages/ReactSmooth';
+import ReactMotion from '../src/pages/ReactMotion';
+import StargeredMotion from '../src/pages/StargeredMotion';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       {/* <SelectInput SelectItem="selectItem"></SelectInput> */}
       <ImmutableSetState></ImmutableSetState>
       <CssTransition></CssTransition>
+      <ReactSmooth></ReactSmooth>
+      <ReactMotion></ReactMotion>
+      <StargeredMotion></StargeredMotion>
     </div>
   );
 }
