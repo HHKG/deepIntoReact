@@ -29,14 +29,20 @@ class StargeredMotionCom extends Component {
       <React.Fragment>
         <div>
           {this.state.length > 0 ? (
-            <StaggeredMotion defaultStyles={boxes} styles={prevStyles => prevStyles.map((item, i) => i === 0?{scale: spring(1, { ...presets.noWobble })}:prevStyles[i - 1])}>
-              {interpolatingStyles =>
-                <div>
-                  {interpolatingStyles.map((item, i) => {
-                    return (
-                      <div className="box2" key={i} style={{transform: `scale(${item.scale}, ${item.scale})`}}></div>)})
-                  }
-                </div>
+            <StaggeredMotion defaultStyles={boxes} styles={prevStyles => {
+              console.log(prevStyles,'prevStyles') 
+              return prevStyles.map((item, i) => i === 0?{scale: spring(1, { ...presets.noWobble })}:prevStyles[i - 1])}}
+              >
+              {interpolatingStyles =>{
+                console.log(interpolatingStyles,'interpolatingStyles')
+                return<div>
+                {interpolatingStyles.map((item, i) => {
+                  return (
+                    <div className="box2" key={i} style={{transform: `scale(${item.scale}, ${item.scale})`}}></div>)})
+                }
+              </div>
+              }
+                
               }
             </StaggeredMotion>
           ) : null}

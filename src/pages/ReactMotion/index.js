@@ -24,18 +24,11 @@ class ReactMotion extends Component{
     this.clickHandler();
   }
   render(){
-
-    const box={
-    
-        width:'100px',
-      height:'100px',
-      backgroundColor:'#000'
-      
-    }
     return(
       <div className="container">
         <Motion style={{x:spring(this.state.left,presets.wobbly)}}>
           {
+            //关键： interpolatingStyle===style
             interpolatingStyle=>{
               return(
                 <div

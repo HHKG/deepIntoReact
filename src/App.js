@@ -10,6 +10,7 @@ import CssTransition from '../src/components/cssTransition';
 import ReactSmooth from '../src/pages/ReactSmooth';
 import ReactMotion from '../src/pages/ReactMotion';
 import StargeredMotion from '../src/pages/StargeredMotion';
+import TransitionMo from '../src/pages/TransitionMotion';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <ReactSmooth></ReactSmooth>
       <ReactMotion></ReactMotion>
       <StargeredMotion></StargeredMotion>
+      <TransitionMo></TransitionMo>
     </div>
   );
 }
